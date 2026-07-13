@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aksholpan Amanzholkyzy | Portfolio</title>
+    <!-- Путь ведет в папку src/styles согласно профессиональной структуре -->
+    <link rel="stylesheet" href="src/styles/main.css">
+    <!-- Подключение иконок FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Навигационная панель -->
+    <nav class="navbar">
+        <div class="logo">Aksholpan<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">О себе</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#experience">Опыт</a></li>
+            <li><a href="#education">Образование</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        <div class="burger" id="burger-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Главный экран (Hero) -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-text-block">
+                <span class="hero-badge">IT Specialist & Cybersecurity Enthusiast</span>
+                <h1 class="hero-title">Акшолпан Аманжолкызы</h1>
+                <p class="hero-subtitle">Создаю надежные системы, программирую роботов и исследую уязвимости. Преподаю технологии и верю в глубокую интеграцию железа и кода.</p>
+                <div class="hero-actions">
+                    <a href="#contacts" class="btn btn-primary">Связаться</a>
+                    <a href="#experience" class="btn btn-secondary">Изучить опыт</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Плавная пастельная органическая фигура (Blob) -->
+                <div class="minimal-blob-wrapper">
+                    <div class="blob-shape"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Раздел "О себе" -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-grid">
+                <div class="about-description">
+                    <p>Я универсальный IT-специалист с глубоким интересом к технологиям, который зародился еще в 13 лет. В моем арсенале — разработка на C# и Python, системное администрирование и практическая кибербезопасность.</p>
+                    <p>Особое внимание я уделяю интеграции аппаратного и программного обеспечения (Hardware-Software Integration). Настоящим вызовом для меня стала самостоятельная сборка и программирование шестиногого робота-гексапода, с которым я успешно выступила на выставке Bala Fest 2023.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-num">Top 50</span>
+                        <span class="stat-text">Финал CTF Государственной технической службы (ГТС) среди профессионалов.</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">48ч</span>
+                        <span class="stat-text">Разработка работающих прототипов на хакатонах Decentrathon и Global Game Jam.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Технологический стек -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Технологический стек</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <div class="skill-group-header">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Cybersecurity</h3>
+                    </div>
+                    <p>Исследование уязвимостей, криптография, сетевая безопасность. Практический опыт на платформах TryHackMe и picoCTF.</p>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-header">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Development</h3>
+                    </div>
+                    <p>Проектирование логики на Python и C#. Разработка игровых механик, базовый Frontend (HTML, CSS, JS).</p>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-header">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h3>Robotics & Hardware</h3>
+                    </div>
+                    <p>Проектирование, сборка плат, программирование микроконтроллеров и интеграция с высокоуровневым ПО.</p>
+                </div>
+            </div>
+            
+            <div class="languages-block">
+                <h4>Владение языками:</h4>
+                <div class="lang-tags">
+                    <span class="lang-tag">Английский</span>
+                    <span class="lang-tag">Казахский</span>
+                    <span class="lang-tag">Русский</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Опыт и активности -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Опыт & Активности</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">2025 — 2026</span>
+                        <span class="timeline-company">CAP Education / Mutayev & Co</span>
+                    </div>
+                    <div class="timeline-info">
+                        <h3>Преподаватель Python/Web/Roblox</h3>
+                        <p>Обучала студентов базовым концепциям программирования, алгоритмической логике и веб-разработке. Развила сильные навыки презентации и декомпозиции сложных технических тем.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">2022 — 2026</span>
+                        <span class="timeline-company">Дворец школьников, Алматы</span>
+                    </div>
+                    <div class="timeline-info">
+                        <h3>Hardware-разработчик</h3>
+                        <p>Спроектировала, собрала и запрограммировала робота-гексапода. Участвовала в выставке Bala Fest 2023. Руководила полным циклом: от закупки компонентов до написания низкоуровневого кода.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">2020 — Наст. время</span>
+                        <span class="timeline-company">Astana IT University</span>
+                    </div>
+                    <div class="timeline-info">
+                        <h3>Cybersecurity Enthusiast</h3>
+                        <p>Достигла финала престижного CTF от Государственной технической службы (ГТС), войдя в ТОП-50 участников. Постоянно решаю лабораторные работы на TryHackMe.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Образование -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Образование</h2>
+            <div class="edu-card">
+                <div class="edu-icon-wrap">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="edu-text">
+                    <h3>Бакалавр Кибербезопасности</h3>
+                    <p class="edu-location">Astana IT University</p>
+                    <span class="edu-period">2025 — 2028</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел контактов -->
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-grid">
+                <div class="contact-text">
+                    <h3>Давайте обсудим проект</h3>
+                    <p>Буду рада сотрудничеству в сфере информационной безопасности, IoT-решений и бэкенд-разработки.</p>
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:akoshaho.93@gmail.com">akoshaho.93@gmail.com</a>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+77064300661">+7 (706) 430-06-61</a>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Астана, ул. Алихана Бокейхана, 40</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrap">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Имя</label>
+                            <input type="text" id="form-name" required placeholder="Ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email</label>
+                            <input type="email" id="form-email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Сообщение</label>
+                            <textarea id="form-message" rows="4" required placeholder="Здравствуйте! Хочу обсудить проект..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Aksholpan Amanzholkyzy. Все права защищены.</p>
+            <div class="footer-socials">
+                <a href="https://www.reallygreatsite.com" target="_blank"><i class="fa-solid fa-globe"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение скрипта -->
+    <script src="src/js/main.js"></script>
+</body>
+</html>
