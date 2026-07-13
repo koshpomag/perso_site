@@ -21,6 +21,28 @@
             <li><a href="#education">Образование</a></li>
             <li><a href="#contacts">Контакты</a></li>
         </ul>
+        <!-- Навигационная панель -->
+    <nav class="navbar">
+        <div class="logo">Aksholpan<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">О себе</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#experience">Опыт</a></li>
+            <li><a href="#education">Образование</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        
+        <!-- ВОТ ЭТА КНОПКА (переключатель темы) -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <div class="burger" id="burger-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
         <div class="burger" id="burger-menu">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -220,12 +242,13 @@
         <div class="container footer-content">
             <p>&copy; 2026 Aksholpan Amanzholkyzy. Все права защищены.</p>
             <div class="footer-socials">
-                <a href="https://www.reallygreatsite.com" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                <a href="https://drive.google.com/drive/folders/1DsZorVHRPmJUwx8w0B2iYDV1ZeFDWcU7?usp=drive_link" target="_blank"><i class="fa-solid fa-globe"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Подключение скрипта -->
-    <script src="src/js/main.js"></script>
+    
+    <!-- Подключение скрипта с отложенной загрузкой -->
+    <script src="src/js/main.js" defer></script>
 </body>
 </html>

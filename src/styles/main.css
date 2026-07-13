@@ -1,37 +1,5 @@
 @import "variables.css";
 
-/* Дальше идет твой обычный код main.css (уже без блока :root, так как мы вынесли его) */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ==========================================================================
-   1. VARIABLES & SYSTEM PRESETS
-   ========================================================================== */
-:root {
-    /* Спокойная пастельная палитра (Nord/Sage Aesthetic) */
-    --color-bg: #FAF9F6;          /* Мягкий алебастровый белый */
-    --color-surface: #FFFFFF;     /* Чистый белый для карточек */
-    --color-primary: #4A6B6C;      /* Приглушенный серо-зеленый (Шалфей) */
-    --color-primary-light: #EBF1F1;/* Нежно-шалфейный фон */
-    --color-accent: #D4A373;       /* Приглушенный теплый песочный/терракотовый */
-    --color-accent-light: #FAEDCD; /* Нежно-песочный */
-    
-    /* Текст */
-    --color-text-main: #2F3E46;    /* Темный графит вместо контрастного черного */
-    --color-text-muted: #6B7A82;   /* Мягкий серый для описаний */
-    --color-border: #E5E9EC;       /* Очень легкая серая граница */
-    
-    /* Системные переменные */
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --border-radius-lg: 16px;
-    --border-radius-md: 8px;
-    --max-width: 1140px;
-}
-
 /* Сброс дефолтных стилей */
 * {
     margin: 0;
@@ -50,6 +18,7 @@ body {
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     padding-top: 80px; /* Компенсация высоты фиксированной шапки */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавная смена темы */
 }
 
 .container {
@@ -132,7 +101,7 @@ section {
     left: 0;
     width: 100%;
     height: 80px;
-    background-color: rgba(250, 249, 246, 0.9);
+    background-color: var(--color-bg); /* Использовали переменную вместо хардкода rgba */
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-border);
     display: flex;
@@ -147,6 +116,7 @@ section {
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: -0.5px;
+    color: var(--color-text-main);
 }
 
 .logo span {
@@ -183,6 +153,31 @@ section {
     height: 2px;
     background-color: var(--color-text-main);
     transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   THEME TOGGLE BUTTON (Вынесли из медиа-запроса на глобальный уровень)
+   ========================================================================== */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-main);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    margin-left: auto; 
+    margin-right: 20px;
+    position: relative;
+    z-index: 9999 !important;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--color-accent);
+    transform: scale(1.1);
 }
 
 /* ==========================================================================
@@ -229,7 +224,6 @@ section {
     max-width: 540px;
 }
 
-/* Органический пастельный блок справа (Blob) */
 .hero-visual {
     display: flex;
     justify-content: center;
@@ -251,15 +245,9 @@ section {
 }
 
 @keyframes morph {
-    0% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    50% {
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    }
-    100% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
 }
 
 /* ==========================================================================
@@ -355,33 +343,12 @@ section {
 .skill-group h3 {
     font-size: 1.3rem;
     font-weight: 700;
+    color: var(--color-text-main);
 }
 
 .skill-group p {
     color: var(--color-text-muted);
     font-size: 0.95rem;
-}
-
-.languages-block {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding-top: 24px;
-    border-top: 1px solid var(--color-border);
-}
-
-.lang-tags {
-    display: flex;
-    gap: 12px;
-}
-
-.lang-tag {
-    background-color: var(--color-primary-light);
-    color: var(--color-primary);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
 }
 
 /* ==========================================================================
@@ -410,7 +377,6 @@ section {
     margin-bottom: 60px;
 }
 
-/* Кружочек на таймлайне */
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -445,6 +411,7 @@ section {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 12px;
+    color: var(--color-text-main);
 }
 
 .timeline-info p {
@@ -484,6 +451,7 @@ section {
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 4px;
+    color: var(--color-text-main);
 }
 
 .edu-location {
@@ -509,6 +477,7 @@ section {
 .contact-text h3 {
     font-size: 1.5rem;
     margin-bottom: 16px;
+    color: var(--color-text-main);
 }
 
 .contact-text p {
@@ -695,5 +664,9 @@ section {
     }
     .burger.toggle .line3 {
         transform: rotate(45deg) translate(-5px, -5px);
+    }
+
+    .theme-toggle-btn {
+        margin-right: 15px;
     }
 }
